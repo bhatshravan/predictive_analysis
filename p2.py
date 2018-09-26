@@ -7,15 +7,17 @@ from matplotlib import style
 
 #headers = ['stocks','timestamp','open']
 
-df = pd.read_csv('ns.csv')
+df = pd.read_csv('data.csv')
 # df.setindex('timestamp', inplace=True)
 print(df.head())
 
 style.use('ggplot')
 
-x = df['timestamp']
+#df.set_index('timestamp',inplace=True)
+
+#x = df['timestamp']
 y = df['open']
 
-#plt.plot(df['close'])
+plt.plot(df['close'])
 #plt.plot(x,y)
-#plt.show()
+plt.show()

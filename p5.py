@@ -25,6 +25,7 @@ Df['S_3'] = Df['Close'].shift(1).rolling(window=3).mean()
 Df['S_9']= Df['Close'].shift(1).rolling(window=9).mean() 
 
 Df= Df.dropna() 
+print(Df.head())
 
 X = Df[['S_3','S_9']] 
 
@@ -58,4 +59,4 @@ plt.legend(['predicted_price','actual_price'])
 
 plt.ylabel("Gold ETF Price")  
 
-plt.show()
+#plt.show()
