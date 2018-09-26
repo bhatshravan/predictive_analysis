@@ -1,5 +1,6 @@
 import pandas as pd
 import datetime
+import mpld3
 
 
 from pandas_datareader import data,wb
@@ -18,4 +19,7 @@ df['Adj Close'].plot()
 df['High'].plot()
 df['Low'].plot()
 
-plt.show()
+#plt.show()
+
+mpld3.fig_to_html()
+mpld3.show()
